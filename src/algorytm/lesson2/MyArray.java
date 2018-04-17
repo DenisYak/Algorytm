@@ -28,17 +28,6 @@ public class MyArray {
 
     }
 
-    public void searchAndDelete(int value) {
-        for (int i = 0; i < this.arr.length; i++) {
-            if (this.arr[i] == value) {
-                System.arraycopy(this.arr, this.arr[i] + 1,
-                        this.arr, this.arr[i],
-                        this.arr.length - this.arr[i] - 1);
-                this.current--;
-            }
-        }
-    }
-
     public int[] searchAllEntry(int value) {
         int countOfMatches = 0;
         for (int j = 0; j < this.arr.length; j++) {
