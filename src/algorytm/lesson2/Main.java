@@ -15,6 +15,9 @@ public class Main {
 
         System.out.println(Arrays.toString(ma.searchAllEntry(2)));
 
+        ma.deleteAllEntry(2 );
+        ma.showMyArray();
+
 //
 //        ma.delete(5);
 //        ma.showMyArray();

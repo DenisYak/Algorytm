@@ -46,9 +46,12 @@ public class MyArray {
     }
 
     public void deleteAllEntry(int value) {
-        searchAllEntry(value);
-
-
+        for (int i = 0; i < searchAllEntry(value).length; i++) {
+            System.arraycopy(this.arr, searchAllEntry(value)[i] + 1,
+                    this.arr, searchAllEntry(value)[i],
+                    this.current - searchAllEntry(value)[i] - 1);
+            this.current--;
+        }
     }
 
     public int searchOneEntry(int value) {
