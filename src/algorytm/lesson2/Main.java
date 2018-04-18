@@ -1,32 +1,5 @@
 package algorytm.lesson2;
-
 import java.util.Arrays;
-
-public class Main {
-
-    public static void main(String[] args) {
-// Создать массив (тысячу элементов).
-
-        MyArray ma = new MyArray(10);
-        ma.showMyArray();
-        ma.fillMyArrayRandomly();
-        ma.showMyArray();
-        ma.searchAllEntry(2);
-
-        System.out.println(Arrays.toString(ma.searchAllEntry(2)));
-
-        ma.deleteAllEntry(2 );
-        ma.showMyArray();
-
-//
-//        ma.delete(5);
-//        ma.showMyArray();
-//
-//        ma.sortBubble();
-//        ma.showMyArray();
-
-
-    }
 
 /*
 **** Создать массив (тысячу элементов).
@@ -37,4 +10,31 @@ public class Main {
      действий и сравнить его со сложностью сортировки.
 */
 
+
+public class Main {
+
+    public static void main(String[] args) {
+// Создать массив (тысячу элементов).
+
+        MyArray ma = new MyArray(1000);
+        ma.showMyArray();
+        ma.fillMyArrayRandomly();
+        ma.showMyArray();
+        System.out.println(ma.searchAllEntry2(2));
+
+        System.out.println(Arrays.toString(ma.deleteAllEntry2(2)));
+
+        // при 1000 элементах в массиве сортировка пузырьком за ~225000 шагов, сложность O(n2)
+//        ma.sortBubble();
+
+        // при 1000 элементах в массиве сортировка выбором за 1000 шагов, сложность O(n2)
+//        ma.sortSelect();
+
+        // при 1000 элементах в массиве сортировка выбором за 1000 шагов, сложность O(n)
+        ma.sortInsert();
+
+
+//        ma.showMyArray();
+
+    }
 }
