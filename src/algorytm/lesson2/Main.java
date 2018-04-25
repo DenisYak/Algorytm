@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
 // Создать массив (тысячу элементов).
 
-        MyArray ma = new MyArray(1000);
+        MyArray ma = new MyArray(100000);
         ma.showMyArray();
         ma.fillMyArrayRandomly();
         ma.showMyArray();
@@ -32,9 +32,6 @@ public class Main {
 
         // при 1000 элементах в массиве сортировка выбором за 1000 шагов, сложность O(n^2)
         ma.sortInsert();
-
-
 //        ma.showMyArray();
-
     }
 }
